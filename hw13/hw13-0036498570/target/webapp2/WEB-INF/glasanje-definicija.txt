@@ -1,0 +1,12 @@
+1	Prljavo Kazalište	https://www.youtube.com/watch?v=I1cvQa1sTL4
+2	Film	https://www.youtube.com/watch?v=UydP3SA7sbQ
+3	Bajaga	https://www.youtube.com/watch?v=OMWijeDSQtM
+4	Divlje Jagode	https://www.youtube.com/watch?v=FKCS0VhmyJA
+5	Opća Opasnost	https://www.youtube.com/watch?v=lKYL24BenzQ
+6	Neki to vole vruće	https://www.youtube.com/watch?v=ITZzn_Vjd34
+7	Aerodrom	https://www.youtube.com/watch?v=fjKsRJF2WAs
+8	Plavi Orkestar	https://www.youtube.com/watch?v=vr4npNKDIis
+9	Đavoli	https://www.youtube.com/watch?v=wghW9z-pqZo
+10	Poslednja igra leptira	https://www.youtube.com/watch?v=enKIGMnUNRA
+11	Denis i Denis	https://www.youtube.com/watch?v=vh0p2FO3Qaw
+12	Bijelo Dugme	https://www.youtube.com/watch?v=CAFE6UZ8DHk

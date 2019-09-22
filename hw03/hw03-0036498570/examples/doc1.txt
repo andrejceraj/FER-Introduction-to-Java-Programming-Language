@@ -1,0 +1,7 @@
+This is some intro text
+{$for var 23 "string" bbb$}
+more text
+more text
+{$= @funct var1"string \"inside\" string"223$}
+even more text
+{$end$}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+
+<style>
+body {
+	background-color: #82C8E6;
+}
+
+h1 {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 5vw;
+	text-align: center;
+	text-shadow: 7px 7px blue;
+}
+
+#instruction {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px blue;
+	font-size: 1.5vw;
+}
+
+.tagButton {
+	border: none;
+	color: white;
+	padding: 16px 0px;
+	width: 110px;
+	text-align: center;
+	font-size: 16px;
+	margin: 2px 8px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	border: 2px solid #008CBA;
+	text-align: center;
+}
+
+.tagButton:hover {
+	background-color: #82C8E6;
+	color: white;
+}
+
+.thumbnailImage {
+	border-radius: 12px;
+	border: 5px solid #008CBA;
+	margin: 16px 80px
+}
+
+.thumbnailImage:hover {
+	opacity: 0.7;
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	cursor: pointer;
+}
+
+#imageDescription {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px blue;
+	font-size: 2vw;
+	text-shadow: 1px 1px blue;
+}
+
+#bigImage {
+	width: 1000px;
+	border: 5px solid #008CBA;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#bigImageTags {
+	font-family: Calibri, Helvetica, sans-serif;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-shadow: 1px 1px blue;
+	font-size: 2vw;
+	text-shadow: 1px 1px blue;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("form input").focus();
+	});
+
+	function createButtons() {
+		$
+				.ajax({
+					url : "rest/tags",
+					data : {
+						dummy : Math.random()
+					},
+					dataType : "json",
+					success : function(data) {
+						var tags = data;
+						var html = "";
+						if (tags == null || tags.length == 0) {
+							html = "Error occured, there is no tags.";
+						} else {
+							for (var i = 0; i < tags.length; i++) {
+								html += "<button class=\"tagButton\" onClick=\"getImagesForTag('"
+										+ tags[i]
+										+ "');\">"
+										+ tags[i]
+										+ "</button>";
+							}
+						}
+						$("#tagButtons").html(html);
+					}
+				});
+	}
+
+	function getImagesForTag(tag) {
+		$
+				.ajax({
+					url : "rest/images/" + tag,
+					data : {
+						tag : tag,
+						dummy : Math.random()
+					},
+					dataType : "json",
+					success : function(data) {
+						var images = data;
+						var html = "";
+						if (images == null || images.length == 0) {
+							html = "No images for selected tag.";
+						} else {
+							for (var i = 0; i < images.length; i++) {
+								html += "<img class=\"thumbnailImage\" src=\"showImage?folder=thumbnails&name="
+										+ images[i].name
+										+ "\" onClick=\"displayImage('"
+										+ images[i].name + "');\" />";
+							}
+						}
+						$("#images").html(html);
+					}
+				});
+	}
+
+	function displayImage(name) {
+		$
+				.ajax({
+					url : "rest/images/getImage/" + name,
+					data : {
+						dummy : Math.random()
+					},
+					dataType : "json",
+					success : function(data) {
+						var image = data;
+						var imageHtml = "";
+						var descriptionHtml = "";
+						var tagsHtml = "<p id=\"bigImageTags\">Tags: ";
+						if (images == null) {
+							html = "Error, image not found.";
+						} else {
+							imageHtml += "<img id=\"bigImage\" src=\"showImage?folder=slike&name="
+									+ image.name + "\" />";
+							descriptionHtml += "<p>" + image.description
+									+ "</p>";
+							for (var i = 0; i < image.tags.length; i++) {
+								if (i === 0) {
+									tagsHtml += image.tags[i];
+								} else {
+									tagsHtml += ", " + image.tags[i];
+								}
+							}
+							tagsHtml += "</p>";
+							$("#imageDescription").html(descriptionHtml);
+							$("#imageTags").html(tagsHtml);
+						}
+						$("#fullSizedImage").html(imageHtml);
+					}
+				});
+	}
+</script>
+</head>
+
+<body onLoad="createButtons();">
+	<h1 style="font-size: 5vw; text-aligh: center;">Welcome to
+		furniture gallery</h1>
+	<p id="instruction">Select a tag for which you would like to see
+		furniture</p>
+	<button class="tagButton" onClick="getImagesForTag('');">Show
+		All</button>
+	<div id="tagButtons">&nbsp;</div>
+	<div id="images">&nbsp;</div>
+	<div id="imageDescription">&nbsp;</div>
+	<div id="fullSizedImage">&nbsp;</div>
+	<div id="imageTags">&nbsp;</div>
+</body>
+</html>

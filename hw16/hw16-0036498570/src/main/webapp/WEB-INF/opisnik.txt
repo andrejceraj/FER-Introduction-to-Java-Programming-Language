@@ -1,0 +1,69 @@
+bed_2floors_modern.jpg
+Modern double bunk bed with metal construction
+modern, bed, bunk bed, metal
+bed_double_simple.jpg
+Simple grey comfortable double bed
+modern, bed, simple, grey, double bed
+bed_old.jpg
+Light brown cosy retro double bed 
+retro, brown, bed, double bed, wood
+bench.jpg
+Simple bench with shoes containers
+brown, bench, simple, wood
+chair_fancy.jpg
+Fancy chair combines modern white leather and dark brown wood
+modern, wood, leather, chair, white 
+chair_wooden.jpg
+Porch chair made of knited wood
+chair, wood, retro, brown, outdoor
+chair.jpg
+Simple grey chair
+wood, chair, simple, grey
+closet_modern.jpg
+Big white modern double closet
+white, modern, closet
+closet.jpg
+Grey tall double closet in retro style
+wood, grey, closet, retro
+commode_drawer.jpg
+Grey stylish drawer
+commode, drawer, grey, modern
+commode_modern.jpg
+Simple wooden modern commode
+wood, commode, simple, commode
+commode.jpg
+Nice retro livingroom commode
+grey, wood, commode, drawer, retro
+couch_modern.jpg
+Outdoor luxurious sofa
+wood, modern, sofa, outdoor
+desk_drawer.jpg
+Dark brown desk with three shelfs attached
+brown, simple, desk
+desk_simple.jpg
+Simple stylish outdoor desk
+wood, simple, modern, outdoor, desk
+drawer.jpg
+Wooden drawer cabinet
+grey, wood, drawer, retro
+kitchen_table_set_simple.jpg
+Simple wooden kitchen table set
+wood, table, chair, white, simple, set, kitchen
+kitchen_table_set.jpg
+Modern kitchen table set
+modern, wood, stone, table, chair, set, kitchen
+mattress.jpg
+Mattres with two layers of the highest quality foam
+mattress, bed
+nightstand_old.jpg
+Grey wooden nightstand in retro style
+grey, wood, nightstand, retro
+sofa_green.jpg
+Set of two green comfortable sofas
+modern, green, sofa, set
+sofa_two.jpg
+Two black modern sofas
+black, modern, sofa, set
+table_low.jpg
+Low dark brown coffee table
+brown, wood, table

@@ -1,0 +1,3 @@
+Lets test "Strings" and escape in tags
+{$ for var "\"this\t\t \\ is\r string\"\n" var2$}
+{$end$}
